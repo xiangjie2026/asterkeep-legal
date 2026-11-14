@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asterkeep — Support</title>
+<meta name="description" content="Asterkeep support: adding a day, reminders, export, purchases, lunar dates and contact.">
+<style>
+  :root {
+    --canvas: #FFF8F2;
+    --surface: #FFFFFF;
+    --ink: #202A49;
+    --ink-soft: #5A6076;
+    --border: #EADFD6;
+    --accent-ink: #6D55B8;
+    --accent-soft: #EDE7FB;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--canvas);
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 64px; }
+  header.brand { display: flex; align-items: center; gap: 12px; margin-bottom: 32px; }
+  .mark {
+    width: 40px; height: 40px; border-radius: 12px;
+    background: var(--accent-soft); color: var(--accent-ink);
+    display: grid; place-items: center; font-weight: 700; font-size: 18px;
+  }
+  .brand-name { font-weight: 700; font-size: 18px; letter-spacing: .2px; }
+  .brand-nav { margin-left: auto; display: flex; gap: 16px; font-size: 14px; }
+  a { color: var(--accent-ink); text-decoration: none; border-bottom: 1px solid rgba(109,85,184,.35); }
+  a:hover { border-bottom-color: var(--accent-ink); }
+  a.plain { border-bottom: 0; }
+  h1 { font-size: 32px; line-height: 1.2; margin: 0 0 8px; letter-spacing: -.4px; }
+  .lead { font-size: 18px; margin: 0 0 32px; }
+  nav.toc {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 18px 20px; margin-bottom: 40px;
+  }
+  nav.toc h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .8px; color: var(--ink-soft); margin: 0 0 10px; }
+  nav.toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 28px; font-size: 14px; }
+  nav.toc li { margin: 3px 0; break-inside: avoid; }
+  section { margin: 0 0 34px; scroll-margin-top: 24px; }
+  h2 { font-size: 21px; line-height: 1.3; margin: 0 0 10px; }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 12px; padding-left: 22px; }
+  li { margin: 4px 0; }
+  .zh {
+    border-left: 3px solid var(--accent-soft);
+    padding: 2px 0 2px 16px;
+    margin: 14px 0 0;
+    color: var(--ink-soft);
+  }
+  .zh h2, .zh strong { color: var(--ink); }
+  .zh h2 { font-size: 17px; margin: 0 0 8px; }
+  .note {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 18px 22px; margin: 0 0 16px;
+  }
+  .note h2 { margin-top: 0; }
+  footer {
+    border-top: 1px solid var(--border); margin-top: 56px; padding-top: 20px;
+    color: var(--ink-soft); font-size: 13px;
+  }
+  footer p { margin: 0 0 6px; }
+  @media (max-width: 560px) {
+    h1 { font-size: 27px; }
+    nav.toc ol { columns: 1; }
+    .wrap { padding: 28px 18px 48px; }
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --canvas: #14161D; --surface: #1C1F28; --ink: #F2F3F7; --ink-soft: #B9BECC;
+      --border: #2E3341; --accent-ink: #B9A6EF; --accent-soft: #332C4A;
+    }
+    a { border-bottom-color: rgba(185,166,239,.4); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="brand">
+    <div class="mark" aria-hidden="true">A</div>
+    <div class="brand-name">Asterkeep</div>
+    <nav class="brand-nav">
+      <a class="plain" href="support.html" aria-current="page">Support</a>
+      <a class="plain" href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Support</h1>
+    <p class="lead">Asterkeep keeps the days you never want to miss. If something is not working, start here.</p>
+
+    <nav class="toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#add">Adding a day</a></li>
+        <li><a href="#edit">Editing or deleting</a></li>
+        <li><a href="#reminder">A reminder did not arrive</a></li>
+        <li><a href="#storage">Where is my data stored?</a></li>
+        <li><a href="#export">Export and import</a></li>
+        <li><a href="#delete-all">Deleting everything</a></li>
+        <li><a href="#restore">Restoring a purchase</a></li>
+        <li><a href="#lunar">Chinese lunar dates</a></li>
+        <li><a href="#language">Languages</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#notices">Important limits</a></li>
+      </ol>
+    </nav>
+
+    <section id="add">
+      <h2>Adding a day</h2>
+      <p>Open the app, type a sentence the way you would say it — for example “My mom’s birthday is May 18” — and tap <em>Find the date</em>. Check the confirmation card, then tap <em>Save</em>. You can also add a date manually at any time.</p>
+      <div class="zh" lang="zh-Hans">
+        <h2>添加一个日期</h2>
+        <p>打开 App，像平时说话一样输入一句话（例如“我妈妈 5 月 18 日生日”），点 <em>Find the date</em>，核对确认卡后点 <em>保存</em>。你也可以随时手动新增。</p>
+      </div>
+    </section>
+
+    <section id="edit">
+      <h2>Editing or deleting</h2>
+      <p>Tap any memory to open it. Use <em>Edit</em> to change the date, person, repeat rule or reminder. Use <em>Delete</em> to remove it; the app asks for confirmation first, because a deleted reminder cannot be restored by us — we never had a copy.</p>
+      <div class="zh" lang="zh-Hans">
+        <h2>修改或删除</h2>
+        <p>点开任意一条记忆即可编辑日期、人物、重复规则与提醒。删除前 App 会二次确认——被删除的提醒我们无法帮你恢复，因为我们从未持有副本。</p>
+      </div>
+    </section>
+
+    <section id="reminder">
+      <h2>A reminder did not arrive</h2>
+      <p>Check, in this order:</p>
+      <ol>
+        <li>iOS Settings → Notifications → Asterkeep → <em>Allow Notifications</em> is on, and the alert style is not <em>Delivered Quietly</em>.</li>
+        <li>A Focus mode (Do Not Disturb, Sleep, Work) is not silencing the app.</li>
+        <li>Low Power Mode is off, or the reminder is not scheduled during it.</li>
+        <li>The device date, time and time zone are correct.</li>
+        <li>The event has not been deleted, archived, or had its reminder removed.</li>
+      </ol>
+      <p>Asterkeep reminders are local notifications. They depend on iOS and on the device being powered on. For anything critical, please also keep a second reminder — the app is a helper, not a guarantee.</p>
+      <div class="zh" lang="zh-Hans">
+        <h2>提醒没有响</h2>
+        <p>请按顺序检查：</p>
+        <ol>
+          <li>iOS 设置 → 通知 → Asterkeep → 允许通知已开启，且未设置为“安静送达”。</li>
+          <li>是否开启了专注模式（勿扰、睡眠、工作）屏蔽了本 App。</li>
+          <li>是否处于低电量模式。</li>
+          <li>设备日期、时间与时区是否正确。</li>
+          <li>该事件是否已被删除、归档，或提醒被移除。</li>
+        </ol>
+        <p>Asterkeep 的提醒是本地通知，依赖 iOS 与设备开机状态。重要事项请另外保留一道提醒——它是助手，不是保证。</p>
+      </div>
+    </section>
+
+    <section id="storage">
+      <h2>Where is my data stored?</h2>
+      <p>On your iPhone only. There is no account and no cloud copy held by us.</p>
+      <div class="zh" lang="zh-Hans">
+        <h2>数据存在哪里</h2>
+        <p>只在你的 iPhone 上。没有账号，我们也不持有云端副本。</p>
+      </div>
+    </section>
+
+    <section id="export">
+      <h2>Export and import</h2>
+      <p>Settings → Your data → <em>Export my data (JSON)</em> produces a file you can keep or move to another device. Import uses the same format. Keep the file safe: it contains the names and dates you entered.</p>
+      <div class="zh" lang="zh-Hans">
+        <h2>导出与导入</h2>
+        <p>设置 → 你的数据 → <em>导出我的数据（JSON）</em>，可得到一份可保存或迁移的文件；导入使用同一格式。文件包含你录入的姓名与日期，请妥善保管。</p>
+      </div>
+    </section>
+
+    <section id="delete-all">
+      <h2>Deleting everything</h2>
+      <p>Settings → Your data → <em>Delete all local data</em>. This cannot be undone.</p>
+      <div class="zh" lang="zh-Hans">
+        <h2>删除全部数据</h2>
+        <p>设置 → 你的数据 → <em>删除全部本地数据</em>，操作不可撤销。</p>
+      </div>
+    </section>
+
+    <section id="restore">
+      <h2>Restoring a purchase</h2>
+      <p>Open Settings → Asterkeep Pro → <em>Restore Purchases</em>. Purchases are tied to your Apple Account, not to the app.</p>
+      <div class="zh" lang="zh-Hans">
+        <h2>恢复购买</h2>
+        <p>设置 → Asterkeep Pro → <em>恢复购买</em>。购买绑定的是你的 Apple 账户，不是 App 本身。</p>
+      </div>
+    </section>
+
+    <section id="lunar">
+      <h2>Chinese lunar dates</h2>
+      <p>Asterkeep converts lunar dates using iOS’s built-in Chinese calendar. Leap months are handled explicitly: when a year has no matching leap month, the app uses the rule you chose. If a converted date looks wrong, please send us the lunar date and the year — this is the one area where regional calendars can differ.</p>
+      <div class="zh" lang="zh-Hans">
+        <h2>农历日期</h2>
+        <p>Asterkeep 使用 iOS 内置的中国历法进行转换；闰月按你选择的规则显式处理，某年没有对应闰月时不会静默猜测。若转换结果异常，请把农历日期与年份发给我们——这是地区历法差异最容易出问题的地方。</p>
+      </div>
+    </section>
+
+    <section id="language">
+      <h2>Languages</h2>
+      <p>English is the primary language. Simplified Chinese is available in Settings → Language. Dates follow your device’s region settings.</p>
+      <div class="zh" lang="zh-Hans">
+        <h2>语言</h2>
+        <p>以英文为主，简体中文可在 设置 → 语言 中切换。日期格式跟随设备的地区设置。</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><a href="mailto:styr12@163.com">styr12@163.com</a> — please include your iOS version, device model and a short description. We reply within two business days.</p>
+      <div class="zh" lang="zh-Hans">
+        <h2>联系我们</h2>
+        <p><a href="mailto:styr12@163.com">styr12@163.com</a>，请附上 iOS 版本、机型与问题描述，两个工作日内回复。</p>
+      </div>
+    </section>
+
+    <div class="note" id="notices">
+      <h2>Important limits</h2>
+      <ul>
+        <li>Asterkeep is a personal memory aid, not a calendar service, alarm system or legal record. Reminders depend on iOS, on device power and on notification permissions.</li>
+        <li>Asterkeep does not provide medical, legal, financial or safety advice, and must not be used as the only reminder for medication, appointments with legal consequences, travel documents or similar time-critical matters.</li>
+        <li>Lunar date conversion follows Apple’s Chinese calendar implementation. Regional and historical calendar variants may differ; the date shown in the confirmation card is the authoritative one for your record.</li>
+        <li>Character illustrations and animations are original works of the publisher and may not be extracted, redistributed or used to train generative models.</li>
+        <li>Asterkeep is provided “as is”. To the extent permitted by law, the publisher is not liable for indirect or consequential loss arising from a missed reminder.</li>
+      </ul>
+      <div class="zh" lang="zh-Hans">
+        <h2>重要边界</h2>
+        <ul>
+          <li>Asterkeep 是个人记忆辅助工具，不是日历服务、闹钟系统或法律凭证。提醒能否送达依赖 iOS、设备电量与通知权限。</li>
+          <li>本 App 不提供医疗、法律、财务或安全建议，不得作为用药、具有法律后果的约见、出行证件等时间敏感事项的唯一提醒手段。</li>
+          <li>农历转换遵循 Apple 的中国历法实现，地区与历史版本可能存在差异；以确认卡中显示的日期为你记录的依据。</li>
+          <li>角色插画与动画为发布者原创作品，不得提取、再分发或用于训练生成式模型。</li>
+          <li>本 App 按“现状”提供。在法律允许范围内，发布者不对因提醒未送达造成的间接或后果性损失承担责任。</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Asterkeep · Effective date: 2026-11-14</p>
+    <p>Contact: <a href="mailto:styr12@163.com">styr12@163.com</a> · <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+</div>
+</body>
+</html>
